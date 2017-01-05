@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC490F031E1E8FFE005FECF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC490F021E1E8FFE005FECF3 /* AppDelegate.swift */; };
+		CC490F051E1E8FFE005FECF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC490F041E1E8FFE005FECF3 /* ViewController.swift */; };
+		CC490F081E1E8FFE005FECF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC490F061E1E8FFE005FECF3 /* Main.storyboard */; };
+		CC490F0B1E1E8FFE005FECF3 /* WeatherReminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC490F091E1E8FFE005FECF3 /* WeatherReminder.xcdatamodeld */; };
+		CC490F0D1E1E8FFE005FECF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC490F0C1E1E8FFE005FECF3 /* Assets.xcassets */; };
+		CC490F101E1E8FFE005FECF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC490F0E1E1E8FFE005FECF3 /* LaunchScreen.storyboard */; };
+		CC490F1B1E1E8FFE005FECF3 /* WeatherReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC490F1A1E1E8FFE005FECF3 /* WeatherReminderTests.swift */; };
+		CC490F261E1E8FFE005FECF3 /* WeatherReminderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC490F251E1E8FFE005FECF3 /* WeatherReminderUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC490F171E1E8FFE005FECF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC490EF71E1E8FFE005FECF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC490EFE1E1E8FFE005FECF3;
+			remoteInfo = WeatherReminder;
+		};
+		CC490F221E1E8FFE005FECF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC490EF71E1E8FFE005FECF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC490EFE1E1E8FFE005FECF3;
+			remoteInfo = WeatherReminder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC490EFF1E1E8FFE005FECF3 /* WeatherReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC490F021E1E8FFE005FECF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC490F041E1E8FFE005FECF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC490F071E1E8FFE005FECF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC490F0A1E1E8FFE005FECF3 /* WeatherReminder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeatherReminder.xcdatamodel; sourceTree = "<group>"; };
+		CC490F0C1E1E8FFE005FECF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC490F0F1E1E8FFE005FECF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC490F111E1E8FFE005FECF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC490F161E1E8FFE005FECF3 /* WeatherReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherReminderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC490F1A1E1E8FFE005FECF3 /* WeatherReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherReminderTests.swift; sourceTree = "<group>"; };
+		CC490F1C1E1E8FFE005FECF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC490F211E1E8FFE005FECF3 /* WeatherReminderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherReminderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC490F251E1E8FFE005FECF3 /* WeatherReminderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherReminderUITests.swift; sourceTree = "<group>"; };
+		CC490F271E1E8FFE005FECF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC490EFC1E1E8FFE005FECF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC490F131E1E8FFE005FECF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC490F1E1E1E8FFE005FECF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC490EF61E1E8FFE005FECF3 = {
+			isa = PBXGroup;
+			children = (
+				CC490F011E1E8FFE005FECF3 /* WeatherReminder */,
+				CC490F191E1E8FFE005FECF3 /* WeatherReminderTests */,
+				CC490F241E1E8FFE005FECF3 /* WeatherReminderUITests */,
+				CC490F001E1E8FFE005FECF3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC490F001E1E8FFE005FECF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC490EFF1E1E8FFE005FECF3 /* WeatherReminder.app */,
+				CC490F161E1E8FFE005FECF3 /* WeatherReminderTests.xctest */,
+				CC490F211E1E8FFE005FECF3 /* WeatherReminderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC490F011E1E8FFE005FECF3 /* WeatherReminder */ = {
+			isa = PBXGroup;
+			children = (
+				CC490F021E1E8FFE005FECF3 /* AppDelegate.swift */,
+				CC490F041E1E8FFE005FECF3 /* ViewController.swift */,
+				CC490F061E1E8FFE005FECF3 /* Main.storyboard */,
+				CC490F0C1E1E8FFE005FECF3 /* Assets.xcassets */,
+				CC490F0E1E1E8FFE005FECF3 /* LaunchScreen.storyboard */,
+				CC490F111E1E8FFE005FECF3 /* Info.plist */,
+				CC490F091E1E8FFE005FECF3 /* WeatherReminder.xcdatamodeld */,
+			);
+			path = WeatherReminder;
+			sourceTree = "<group>";
+		};
+		CC490F191E1E8FFE005FECF3 /* WeatherReminderTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC490F1A1E1E8FFE005FECF3 /* WeatherReminderTests.swift */,
+				CC490F1C1E1E8FFE005FECF3 /* Info.plist */,
+			);
+			path = WeatherReminderTests;
+			sourceTree = "<group>";
+		};
+		CC490F241E1E8FFE005FECF3 /* WeatherReminderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC490F251E1E8FFE005FECF3 /* WeatherReminderUITests.swift */,
+				CC490F271E1E8FFE005FECF3 /* Info.plist */,
+			);
+			path = WeatherReminderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC490EFE1E1E8FFE005FECF3 /* WeatherReminder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC490F2A1E1E8FFE005FECF3 /* Build configuration list for PBXNativeTarget "WeatherReminder" */;
+			buildPhases = (
+				CC490EFB1E1E8FFE005FECF3 /* Sources */,
+				CC490EFC1E1E8FFE005FECF3 /* Frameworks */,
+				CC490EFD1E1E8FFE005FECF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeatherReminder;
+			productName = WeatherReminder;
+			productReference = CC490EFF1E1E8FFE005FECF3 /* WeatherReminder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC490F151E1E8FFE005FECF3 /* WeatherReminderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC490F2D1E1E8FFE005FECF3 /* Build configuration list for PBXNativeTarget "WeatherReminderTests" */;
+			buildPhases = (
+				CC490F121E1E8FFE005FECF3 /* Sources */,
+				CC490F131E1E8FFE005FECF3 /* Frameworks */,
+				CC490F141E1E8FFE005FECF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC490F181E1E8FFE005FECF3 /* PBXTargetDependency */,
+			);
+			name = WeatherReminderTests;
+			productName = WeatherReminderTests;
+			productReference = CC490F161E1E8FFE005FECF3 /* WeatherReminderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC490F201E1E8FFE005FECF3 /* WeatherReminderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC490F301E1E8FFE005FECF3 /* Build configuration list for PBXNativeTarget "WeatherReminderUITests" */;
+			buildPhases = (
+				CC490F1D1E1E8FFE005FECF3 /* Sources */,
+				CC490F1E1E1E8FFE005FECF3 /* Frameworks */,
+				CC490F1F1E1E8FFE005FECF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC490F231E1E8FFE005FECF3 /* PBXTargetDependency */,
+			);
+			name = WeatherReminderUITests;
+			productName = WeatherReminderUITests;
+			productReference = CC490F211E1E8FFE005FECF3 /* WeatherReminderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC490EF71E1E8FFE005FECF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Cassius Chen";
+				TargetAttributes = {
+					CC490EFE1E1E8FFE005FECF3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 46H7KU73H8;
+						ProvisioningStyle = Automatic;
+					};
+					CC490F151E1E8FFE005FECF3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 46H7KU73H8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CC490EFE1E1E8FFE005FECF3;
+					};
+					CC490F201E1E8FFE005FECF3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 46H7KU73H8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CC490EFE1E1E8FFE005FECF3;
+					};
+				};
+			};
+			buildConfigurationList = CC490EFA1E1E8FFE005FECF3 /* Build configuration list for PBXProject "WeatherReminder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC490EF61E1E8FFE005FECF3;
+			productRefGroup = CC490F001E1E8FFE005FECF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC490EFE1E1E8FFE005FECF3 /* WeatherReminder */,
+				CC490F151E1E8FFE005FECF3 /* WeatherReminderTests */,
+				CC490F201E1E8FFE005FECF3 /* WeatherReminderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC490EFD1E1E8FFE005FECF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC490F101E1E8FFE005FECF3 /* LaunchScreen.storyboard in Resources */,
+				CC490F0D1E1E8FFE005FECF3 /* Assets.xcassets in Resources */,
+				CC490F081E1E8FFE005FECF3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC490F141E1E8FFE005FECF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC490F1F1E1E8FFE005FECF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC490EFB1E1E8FFE005FECF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC490F051E1E8FFE005FECF3 /* ViewController.swift in Sources */,
+				CC490F0B1E1E8FFE005FECF3 /* WeatherReminder.xcdatamodeld in Sources */,
+				CC490F031E1E8FFE005FECF3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC490F121E1E8FFE005FECF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC490F1B1E1E8FFE005FECF3 /* WeatherReminderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC490F1D1E1E8FFE005FECF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC490F261E1E8FFE005FECF3 /* WeatherReminderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC490F181E1E8FFE005FECF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC490EFE1E1E8FFE005FECF3 /* WeatherReminder */;
+			targetProxy = CC490F171E1E8FFE005FECF3 /* PBXContainerItemProxy */;
+		};
+		CC490F231E1E8FFE005FECF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC490EFE1E1E8FFE005FECF3 /* WeatherReminder */;
+			targetProxy = CC490F221E1E8FFE005FECF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC490F061E1E8FFE005FECF3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC490F071E1E8FFE005FECF3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC490F0E1E1E8FFE005FECF3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC490F0F1E1E8FFE005FECF3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC490F281E1E8FFE005FECF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC490F291E1E8FFE005FECF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC490F2B1E1E8FFE005FECF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 46H7KU73H8;
+				INFOPLIST_FILE = WeatherReminder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cassiuschen.WeatherReminder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CC490F2C1E1E8FFE005FECF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 46H7KU73H8;
+				INFOPLIST_FILE = WeatherReminder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cassiuschen.WeatherReminder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CC490F2E1E1E8FFE005FECF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 46H7KU73H8;
+				INFOPLIST_FILE = WeatherReminderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cassiuschen.WeatherReminderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherReminder.app/WeatherReminder";
+			};
+			name = Debug;
+		};
+		CC490F2F1E1E8FFE005FECF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 46H7KU73H8;
+				INFOPLIST_FILE = WeatherReminderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cassiuschen.WeatherReminderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherReminder.app/WeatherReminder";
+			};
+			name = Release;
+		};
+		CC490F311E1E8FFE005FECF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 46H7KU73H8;
+				INFOPLIST_FILE = WeatherReminderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cassiuschen.WeatherReminderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = WeatherReminder;
+			};
+			name = Debug;
+		};
+		CC490F321E1E8FFE005FECF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 46H7KU73H8;
+				INFOPLIST_FILE = WeatherReminderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cassiuschen.WeatherReminderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = WeatherReminder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC490EFA1E1E8FFE005FECF3 /* Build configuration list for PBXProject "WeatherReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC490F281E1E8FFE005FECF3 /* Debug */,
+				CC490F291E1E8FFE005FECF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC490F2A1E1E8FFE005FECF3 /* Build configuration list for PBXNativeTarget "WeatherReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC490F2B1E1E8FFE005FECF3 /* Debug */,
+				CC490F2C1E1E8FFE005FECF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CC490F2D1E1E8FFE005FECF3 /* Build configuration list for PBXNativeTarget "WeatherReminderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC490F2E1E1E8FFE005FECF3 /* Debug */,
+				CC490F2F1E1E8FFE005FECF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CC490F301E1E8FFE005FECF3 /* Build configuration list for PBXNativeTarget "WeatherReminderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC490F311E1E8FFE005FECF3 /* Debug */,
+				CC490F321E1E8FFE005FECF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CC490F091E1E8FFE005FECF3 /* WeatherReminder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CC490F0A1E1E8FFE005FECF3 /* WeatherReminder.xcdatamodel */,
+			);
+			currentVersion = CC490F0A1E1E8FFE005FECF3 /* WeatherReminder.xcdatamodel */;
+			path = WeatherReminder.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CC490EF71E1E8FFE005FECF3 /* Project object */;
+}
