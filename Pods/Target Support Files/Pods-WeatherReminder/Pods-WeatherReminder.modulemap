@@ -1,0 +1,6 @@
+framework module Pods_WeatherReminder {
+  umbrella header "Pods-WeatherReminder-umbrella.h"
+
+  export *
+  module * { export * }
+}
