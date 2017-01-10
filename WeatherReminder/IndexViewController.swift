@@ -9,8 +9,8 @@
 import UIKit
 import CoreLocation
 
-class IndexViewController: UIViewController, CLLocationManagerDelegate {
-    let lcManager : CLLocationManager = CLLocationManager()
+class IndexViewController: UIViewController, AMapLocationManagerDelegate {
+    let lcManager = AMapLocationManager()
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var datetimeLabel: UILabel!
     override func viewDidLoad() {
@@ -27,13 +27,15 @@ class IndexViewController: UIViewController, CLLocationManagerDelegate {
     // 定位相关
     func locationServerInit() {
         lcManager.delegate = self
-        lcManager.requestAlwaysAuthorization() // 申请定位权限
-        lcManager.desiredAccuracy = kCLLocationAccuracyBest // 设置定位精确度为最佳精确度
+        lcManager.desiredAccuracy = kCLLocationAccuracyKilometer // 设置定位精确度为一公里左右的精度，以加快定位速度
+        lcManager.locationTimeout = 4
+        lcManager.reGeocodeTimeout = 4
         lcManager.distanceFilter = 10000.0
-        
-        lcManager.startUpdatingLocation()
+        //lcManager.requestAlwaysAuthorization() // 申请定位权限
+        //lcManager.startUpdatingLocation()
+        getLocation()
     }
-    
+    /* Using Core Location
     func checkIfLocationServerAuthorized() {
         switch CLLocationManager.authorizationStatus() {
             case .authorizedAlways:
@@ -68,7 +70,28 @@ class IndexViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
+    }*/
+    
+    func amapLocationManager(_ manager: AMapLocationManager!, didUpdate location: CLLocation!, reGeocode: AMapLocationReGeocode!) {
+        locationLabel.text = "\(reGeocode) - \(location.coordinate.latitude), \(location.coordinate.longitude)"
     }
+    
+    func getLocation() {
+        lcManager.requestLocation(withReGeocode: true, completionBlock: {(location : CLLocation?, reGeocode : AMapLocationReGeocode?, error : Error?) in
+            if((error) != nil) {
+                print(error!)
+                return
+            } else {
+                if((reGeocode) != nil) {
+                    self.locationLabel.text = "\(reGeocode!.poiName!)"
+                    print(reGeocode!)
+                    print(" ----------------- 获得定位： \(location?.coordinate.latitude), \(location?.coordinate.longitude)，\(reGeocode!.formattedAddress!)")
+                }
+            }
+        })
+    }
+    
+    
     
     
     // UI 相关
@@ -77,6 +100,10 @@ class IndexViewController: UIViewController, CLLocationManagerDelegate {
         let roundedLayer = self.view.layer
         roundedLayer.masksToBounds = true
         roundedLayer.cornerRadius = cornerRadius
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 
 }

@@ -14,16 +14,29 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Alamofire (4.2.0)
+  - AlamofireNetworkActivityIndicator (2.1.0):
+    - Alamofire (~> 4.1)
+  - AMapFoundation-NO-IDFA (1.3.3)
+  - AMapLocation-NO-IDFA (2.3.0):
+    - AMapFoundation-NO-IDFA (~> 1.3)
   - SwiftyJSON (3.1.3)
 
 DEPENDENCIES:
   - AFNetworking
+  - Alamofire
+  - AlamofireNetworkActivityIndicator
+  - AMapLocation-NO-IDFA
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  AlamofireNetworkActivityIndicator: 4716f6554bdfb9c7cf13b1e0e3af21163129690a
+  AMapFoundation-NO-IDFA: 1c79258b0a2c2539a8e6809174c06c55340129a7
+  AMapLocation-NO-IDFA: c458bd5f15d1243381274508f029960ae48b2801
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
 
-PODFILE CHECKSUM: ce551ba9f549e4cc27b5d62824044c83d86c115b
+PODFILE CHECKSUM: 93841e4e068ad4513a878de88d82dc781728c0e9
 
 COCOAPODS: 1.1.1

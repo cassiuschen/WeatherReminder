@@ -19,6 +19,7 @@
 		CC490F1B1E1E8FFE005FECF3 /* WeatherReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC490F1A1E1E8FFE005FECF3 /* WeatherReminderTests.swift */; };
 		CC490F261E1E8FFE005FECF3 /* WeatherReminderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC490F251E1E8FFE005FECF3 /* WeatherReminderUITests.swift */; };
 		CC4DB0D01E24D5D0008812C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4DB0CF1E24D5D0008812C1 /* CoreLocation.framework */; };
+		CC96632C1E24F25600086F1B /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96632B1E24F25600086F1B /* Api.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		CC490F251E1E8FFE005FECF3 /* WeatherReminderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherReminderUITests.swift; sourceTree = "<group>"; };
 		CC490F271E1E8FFE005FECF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC4DB0CF1E24D5D0008812C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CC96632B1E24F25600086F1B /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		CCF61FCC1E253876003A0245 /* CBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,8 @@
 				CC490F0E1E1E8FFE005FECF3 /* LaunchScreen.storyboard */,
 				CC490F111E1E8FFE005FECF3 /* Info.plist */,
 				CC490F091E1E8FFE005FECF3 /* WeatherReminder.xcdatamodeld */,
+				CC96632B1E24F25600086F1B /* Api.swift */,
+				CCF61FCC1E253876003A0245 /* CBridge.h */,
 			);
 			path = WeatherReminder;
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 			files = (
 				CC490F051E1E8FFE005FECF3 /* IndexViewController.swift in Sources */,
 				CC490F0B1E1E8FFE005FECF3 /* WeatherReminder.xcdatamodeld in Sources */,
+				CC96632C1E24F25600086F1B /* Api.swift in Sources */,
 				CC490F031E1E8FFE005FECF3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,11 +615,13 @@
 			baseConfigurationReference = 76A37375886D4D381F5D2B2B /* Pods-WeatherReminder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 46H7KU73H8;
 				INFOPLIST_FILE = WeatherReminder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cassiuschen.WeatherReminder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = WeatherReminder/CBridge.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -623,11 +631,13 @@
 			baseConfigurationReference = 9AB33111954F5BBAC8AF3697 /* Pods-WeatherReminder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 46H7KU73H8;
 				INFOPLIST_FILE = WeatherReminder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cassiuschen.WeatherReminder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = WeatherReminder/CBridge.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

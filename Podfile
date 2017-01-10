@@ -6,6 +6,9 @@ target 'WeatherReminder' do
   use_frameworks!
   pod 'AFNetworking'
   pod 'SwiftyJSON'
+  pod 'Alamofire'
+  pod 'AlamofireNetworkActivityIndicator'
+  pod 'AMapLocation-NO-IDFA'
   # Pods for WeatherReminder
 
   target 'WeatherReminderTests' do

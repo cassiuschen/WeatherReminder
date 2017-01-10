@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AlamofireNetworkActivityIndicator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-WeatherReminder.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,22 +42,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>115FA0D867E07C04838493890DBD8D29</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>55C94AF366B76FD495BFDAB9C6D80451</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F6240C365DF82559F9F948BFD9C8A84</key>
+		<key>5F25E9AD2228AC76B254DCA041D518CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9876FCD825B8604FD7D129A9AED7596</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>BB0E27D5C5C8D3E17F424F11EA2EABC8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CB3D6C57AA25D75AB0EC0EE6A412AF51</key>
 		<dict>
 			<key>primary</key>
 			<true/>
