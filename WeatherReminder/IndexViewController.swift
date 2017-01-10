@@ -13,10 +13,12 @@ class IndexViewController: UIViewController, AMapLocationManagerDelegate {
     let lcManager = AMapLocationManager()
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var datetimeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         makeRoundedCorror() // 定义圆角
         locationServerInit() // 初始化定位服务
+        setTimeLabel()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +37,7 @@ class IndexViewController: UIViewController, AMapLocationManagerDelegate {
         //lcManager.startUpdatingLocation()
         getLocation()
     }
-    /* Using Core Location
+    /* Using Core Location, 使用 Core Location 定位可行，但需要反查地点所属 LocationID 以便查询天气，故直接引用高德地图 SDK，然后根据表进行反查。
     func checkIfLocationServerAuthorized() {
         switch CLLocationManager.authorizationStatus() {
             case .authorizedAlways:
@@ -83,7 +85,7 @@ class IndexViewController: UIViewController, AMapLocationManagerDelegate {
                 return
             } else {
                 if((reGeocode) != nil) {
-                    self.locationLabel.text = "\(reGeocode!.poiName!)"
+                    self.locationLabel.text = "\(reGeocode!.province!)\((reGeocode!.province! != reGeocode!.city!) ? (reGeocode!.city!) : (" "))\(reGeocode!.district!)"
                     print(reGeocode!)
                     print(" ----------------- 获得定位： \(location?.coordinate.latitude), \(location?.coordinate.longitude)，\(reGeocode!.formattedAddress!)")
                 }
@@ -104,6 +106,13 @@ class IndexViewController: UIViewController, AMapLocationManagerDelegate {
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    func setTimeLabel() {
+        let date = Date()
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "yy'年'MM'月'dd'日'"
+        datetimeLabel.text = timeFormatter.string(from: date)
     }
 
 }
