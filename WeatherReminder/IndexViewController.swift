@@ -11,6 +11,8 @@ import CoreLocation
 
 class IndexViewController: UIViewController, AMapLocationManagerDelegate {
     let lcManager = AMapLocationManager()
+    var weatherDataSource = WeatherData()
+    
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var datetimeLabel: UILabel!
     
@@ -27,7 +29,7 @@ class IndexViewController: UIViewController, AMapLocationManagerDelegate {
     }
     
     // 定位相关
-    func locationServerInit() {
+    private func locationServerInit() {
         lcManager.delegate = self
         lcManager.desiredAccuracy = kCLLocationAccuracyKilometer // 设置定位精确度为一公里左右的精度，以加快定位速度
         lcManager.locationTimeout = 4
@@ -88,16 +90,23 @@ class IndexViewController: UIViewController, AMapLocationManagerDelegate {
                     self.locationLabel.text = "\(reGeocode!.province!)\((reGeocode!.province! != reGeocode!.city!) ? (reGeocode!.city!) : (" "))\(reGeocode!.district!)"
                     print(reGeocode!)
                     print(" ----------------- 获得定位： \(location?.coordinate.latitude), \(location?.coordinate.longitude)，\(reGeocode!.formattedAddress!)")
+                    
+                    self.getWeatherData(province: reGeocode!.province!, city: reGeocode!.city!)
                 }
             }
         })
+    }
+    
+    // 天气数据
+    private func getWeatherData(province provinceName: String, city cityName: String) {
+        weatherDataSource.findCity(province: provinceName, city: cityName)
     }
     
     
     
     
     // UI 相关
-    func makeRoundedCorror() {
+    private func makeRoundedCorror() {
         let cornerRadius : CGFloat = 15.0
         let roundedLayer = self.view.layer
         roundedLayer.masksToBounds = true
@@ -108,7 +117,7 @@ class IndexViewController: UIViewController, AMapLocationManagerDelegate {
         return true
     }
     
-    func setTimeLabel() {
+    private func setTimeLabel() {
         let date = Date()
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "yy'年'MM'月'dd'日'"

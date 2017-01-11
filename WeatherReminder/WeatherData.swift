@@ -12,9 +12,18 @@ import SwiftyJSON
 
 class WeatherData {
     static let URL = "https://free-api.heweather.com/v5"
-    static let ApiNamespace = "v5"
     static let ApiKey : String = "a5804a55058f44cb8309f95619b7c489"
     static var cityList : [Location] = []
+    
+    private var locationInfoStruct : Location = Location()
+    var locationInfo : Location {
+        get {
+            return locationInfoStruct
+        }
+        set {
+            print(newValue)
+        }
+    }
     
     enum ErrorType: Int {
         case unauthorized = 401
@@ -22,7 +31,7 @@ class WeatherData {
         case others = 0
     }
     
-    static func request(_ request: URLRequestConvertible, successCallback success: ((JSON?) -> Void)?, failCallback failure: ((ErrorType, JSON?, Error) -> Void)?) {
+    private static func request(_ request: URLRequestConvertible, successCallback success: ((JSON?) -> Void)?, failCallback failure: ((ErrorType, JSON?, Error) -> Void)?) {
         Alamofire.request(request)
                  .validate()
             .responseJSON(completionHandler: {(response) in
@@ -46,17 +55,17 @@ class WeatherData {
     }
     
     struct Location {
-        var cityName : String
-        var provinceName : String
-        var locationId : String
+        var cityName : String = ""
+        var provinceName : String = ""
+        var locationId : String = ""
     }
     
     init() {
         loadCityList()
     }
     
-    func loadCityList() {
-        let path : String = Bundle.main.path(forResource: "CityList", ofType: "Json")!
+    private func loadCityList() {
+        let path : String = Bundle.main.path(forResource: "CityList", ofType: "json")!
         let nsUrl = NSURL(fileURLWithPath: path)
         let nsData : NSData = NSData(contentsOf: nsUrl as URL)!
         
@@ -68,58 +77,23 @@ class WeatherData {
         }
     }
     
-}
-
-
-// 和风天气 API 服务路由
-enum ApiEndpoint : URLRequestConvertible {
-    static let baseURL = WeatherData.URL
-    
-    case currentWeather(String)
-    case futureWeather(String)
-    
-    var method : Alamofire.HTTPMethod {
-        switch self {
-        case .currentWeather(_), .futureWeather(_):
-            return .get
+    func findCity(province provName: String, city cityName: String) {
+        let data = ["province": removeLocationSuffix(string: provName), "city": removeLocationSuffix(string: cityName)]
+        let searchResult = WeatherData.cityList.first(where: { $0.provinceName == data["province"] && $0.cityName == data["city"]})
+        
+        if searchResult != nil {
+            self.locationInfo = searchResult!
+        } else {
+            self.locationInfo.locationId = data["city"]!
         }
     }
     
-    var path : String {
-        switch self {
-        case .currentWeather(_):
-            return "/now"
-        case .futureWeather(_):
-            return "/forecast"
-        }
-    }
-    
-    var parameters : Parameters {
-        switch self {
-        case .currentWeather(let city):
-            return ["city": city, "key": WeatherData.ApiKey]
-        case .futureWeather(let city):
-            return ["city": city, "key": WeatherData.ApiKey]
-        default:
-            return ["city": "北京", "key": WeatherData.ApiKey]
-        }
-    }
-    
-    // MARK: URLRequestConvertible
-    func asURLRequest() throws -> URLRequest {
-        let result: (path: String, parameters: Parameters) = (path, parameters)
-        
-        let url = try ApiEndpoint.baseURL.asURL()
-        var urlRequest = URLRequest(url: url.appendingPathComponent(result.path))
-        urlRequest.httpMethod = method.rawValue
-        
-        switch self {
-        case .currentWeather, .futureWeather:
-            urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
-        default:
-            break
+    private func removeLocationSuffix(string rawStr: String) -> String {
+        var str = rawStr
+        if (str.characters.last == "区" || str.characters.last == "市" || str.characters.last == "省") {
+            str.remove(at: str.index(before: str.endIndex))
         }
         
-        return urlRequest
+        return str
     }
 }

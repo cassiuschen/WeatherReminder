@@ -21,6 +21,7 @@
 		CC4DB0D01E24D5D0008812C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4DB0CF1E24D5D0008812C1 /* CoreLocation.framework */; };
 		CC96632C1E24F25600086F1B /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96632B1E24F25600086F1B /* WeatherData.swift */; };
 		CCC8882D1E256D76008214CE /* CityList.json in Resources */ = {isa = PBXBuildFile; fileRef = CCC8882C1E256D76008214CE /* CityList.json */; };
+		CCC888311E2612BC008214CE /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC888301E2612BC008214CE /* ApiEndpoint.swift */; };
 		CCF61FCF1E2559D3003A0245 /* LocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF61FCE1E2559D3003A0245 /* LocationInfo.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		CC4DB0CF1E24D5D0008812C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CC96632B1E24F25600086F1B /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		CCC8882C1E256D76008214CE /* CityList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CityList.json; sourceTree = "<group>"; };
+		CCC888301E2612BC008214CE /* ApiEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		CCF61FCC1E253876003A0245 /* CBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBridge.h; sourceTree = "<group>"; };
 		CCF61FCE1E2559D3003A0245 /* LocationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				CC96632B1E24F25600086F1B /* WeatherData.swift */,
+				CCC888301E2612BC008214CE /* ApiEndpoint.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				CC490F051E1E8FFE005FECF3 /* IndexViewController.swift in Sources */,
 				CC490F0B1E1E8FFE005FECF3 /* WeatherReminder.xcdatamodeld in Sources */,
 				CC96632C1E24F25600086F1B /* WeatherData.swift in Sources */,
+				CCC888311E2612BC008214CE /* ApiEndpoint.swift in Sources */,
 				CCF61FCF1E2559D3003A0245 /* LocationInfo.swift in Sources */,
 				CC490F031E1E8FFE005FECF3 /* AppDelegate.swift in Sources */,
 			);
