@@ -124,57 +124,14 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LnL-Y4-YIa">
-                                <rect key="frame" x="25" y="420" width="325" height="227"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="tnw-BS-OS3">
-                                        <rect key="frame" x="0.0" y="28" width="325" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tnw-BS-OS3" id="4tL-eC-PAa">
-                                            <rect key="frame" x="0.0" y="0.0" width="325" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="IE9-V2-VoF">
-                                        <rect key="frame" x="0.0" y="72" width="325" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IE9-V2-VoF" id="YRG-dR-ZDg">
-                                            <rect key="frame" x="0.0" y="0.0" width="325" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="MU3-Ah-frq">
-                                        <rect key="frame" x="0.0" y="116" width="325" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MU3-Ah-frq" id="Gk4-8m-bOy">
-                                            <rect key="frame" x="0.0" y="0.0" width="325" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rxP-R5-fVb">
-                                        <rect key="frame" x="0.0" y="160" width="325" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rxP-R5-fVb" id="cog-F8-3RT">
-                                            <rect key="frame" x="0.0" y="0.0" width="325" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LnL-Y4-YIa" secondAttribute="bottom" constant="20" id="Bnv-Q8-7YD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LnL-Y4-YIa" secondAttribute="trailing" constant="9" id="HAv-1m-7OQ"/>
                             <constraint firstItem="eO6-yU-xRG" firstAttribute="leading" secondItem="Rjq-q5-k2p" secondAttribute="leading" id="Qna-s8-Rzx"/>
-                            <constraint firstItem="LnL-Y4-YIa" firstAttribute="top" secondItem="UsA-mm-lp1" secondAttribute="bottom" constant="10" id="WCf-eT-BkD"/>
                             <constraint firstItem="UsA-mm-lp1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="WvS-z6-Zvw"/>
                             <constraint firstItem="Rjq-q5-k2p" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="YOH-nW-Jkv"/>
                             <constraint firstItem="UsA-mm-lp1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="110" id="bIl-6f-ugk"/>
                             <constraint firstItem="Rjq-q5-k2p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="n3b-Ke-vrB"/>
-                            <constraint firstItem="LnL-Y4-YIa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="obi-hV-6xu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UsA-mm-lp1" secondAttribute="trailing" constant="9" id="uz8-aA-3Au"/>
                             <constraint firstItem="eO6-yU-xRG" firstAttribute="top" secondItem="Rjq-q5-k2p" secondAttribute="bottom" id="zt1-Xs-wBF"/>
                         </constraints>

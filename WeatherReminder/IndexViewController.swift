@@ -88,8 +88,7 @@ class IndexViewController: UIViewController, AMapLocationManagerDelegate {
             } else {
                 if((reGeocode) != nil) {
                     self.locationLabel.text = "\(reGeocode!.province!)\((reGeocode!.province! != reGeocode!.city!) ? (reGeocode!.city!) : (" "))\(reGeocode!.district!)"
-                    print(reGeocode!)
-                    print(" ----------------- 获得定位： \(location?.coordinate.latitude), \(location?.coordinate.longitude)，\(reGeocode!.formattedAddress!)")
+                    debugPrint(" ----------------- 获得定位： \(location!.coordinate.latitude), \(location!.coordinate.longitude)，\(reGeocode!.formattedAddress!)")
                     
                     self.getWeatherData(province: reGeocode!.province!, city: reGeocode!.city!)
                 }

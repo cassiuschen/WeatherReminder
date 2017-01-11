@@ -38,8 +38,6 @@ enum ApiEndpoint : URLRequestConvertible {
             return ["city": city, "key": WeatherData.ApiKey]
         case .futureWeather(let city):
             return ["city": city, "key": WeatherData.ApiKey]
-        default:
-            return ["city": "北京", "key": WeatherData.ApiKey]
         }
     }
     
@@ -54,8 +52,6 @@ enum ApiEndpoint : URLRequestConvertible {
         switch self {
         case .currentWeather, .futureWeather:
             urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
-        default:
-            break
         }
         
         return urlRequest
