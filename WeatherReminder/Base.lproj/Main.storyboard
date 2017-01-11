@@ -46,82 +46,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="JCq-zT-4Yh"/>
                                 </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="最高气温">
-                                        <attributes>
-                                            <color key="NSColor" red="0.24706" green="0.24706" blue="0.24706" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="28" name="PingFangSC-Thin"/>
-                                            <real key="NSKern" value="-0.59999999999999998"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="19°">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.44706000000000001" blue="0.23921999999999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="28" name="PingFangSC-Regular"/>
-                                            <real key="NSKern" value="-0.59999999999999998"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="， 有">
-                                        <attributes>
-                                            <color key="NSColor" red="0.24706" green="0.24706" blue="0.24706" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="28" name="PingFangSC-Thin"/>
-                                            <real key="NSKern" value="-0.59999999999999998"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="霾">
-                                        <attributes>
-                                            <color key="NSColor" red="0.59608000000000005" green="0.34117999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="28" name="PingFangSC-Regular"/>
-                                            <real key="NSKern" value="-0.59999999999999998"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">。
-夜间有</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.24706" green="0.24706" blue="0.24706" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="28" name="PingFangSC-Thin"/>
-                                            <real key="NSKern" value="-0.59999999999999998"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="大风">
-                                        <attributes>
-                                            <color key="NSColor" red="0.59608000000000005" green="0.34117999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="28" name="PingFangSC-Regular"/>
-                                            <real key="NSKern" value="-0.59999999999999998"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="，最低气温">
-                                        <attributes>
-                                            <color key="NSColor" red="0.24706" green="0.24706" blue="0.24706" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="28" name="PingFangSC-Thin"/>
-                                            <real key="NSKern" value="-0.59999999999999998"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="3°">
-                                        <attributes>
-                                            <color key="NSColor" red="0.20391999999999999" green="0.77646999999999999" blue="0.61175999999999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="28" name="PingFangSC-Regular"/>
-                                            <real key="NSKern" value="-0.59999999999999998"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="，请注意保暖。">
-                                        <attributes>
-                                            <color key="NSColor" red="0.24706" green="0.24706" blue="0.24706" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="28" name="PingFangSC-Thin"/>
-                                            <real key="NSKern" value="-0.59999999999999998"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -138,6 +63,7 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="currentWeatherLabel" destination="UsA-mm-lp1" id="kYW-tR-gMd"/>
                         <outlet property="datetimeLabel" destination="eO6-yU-xRG" id="7fQ-mt-8Pg"/>
                         <outlet property="locationLabel" destination="Rjq-q5-k2p" id="vsP-9a-WcW"/>
                     </connections>

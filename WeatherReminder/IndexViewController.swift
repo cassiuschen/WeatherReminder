@@ -13,6 +13,7 @@ class IndexViewController: UIViewController, AMapLocationManagerDelegate {
     let lcManager = AMapLocationManager()
     var weatherDataSource = WeatherData()
     
+    @IBOutlet var currentWeatherLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var datetimeLabel: UILabel!
     
@@ -98,7 +99,9 @@ class IndexViewController: UIViewController, AMapLocationManagerDelegate {
     
     // 天气数据
     private func getWeatherData(province provinceName: String, city cityName: String) {
-        weatherDataSource.findCity(province: provinceName, city: cityName)
+        weatherDataSource.loadData(province: provinceName, city: cityName, success: {() -> Void in
+            self.currentWeatherLabel.text = "\(self.weatherDataSource.currentWeatherData!.condition)，体表温度\(self.weatherDataSource.currentWeatherData!.fellTemperature)℃\n请注意保暖。"
+        })
     }
     
     

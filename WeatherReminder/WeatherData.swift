@@ -143,6 +143,17 @@ class WeatherData {
         })
     }
     
+    func loadData(province provName: String, city cityName: String, success successCallback: (() -> Void)?) {
+        findCity(province: provName, city: cityName)
+        let _ : Timer! = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (t) -> Void in
+            if self.currentWeatherData != nil {
+                successCallback?()
+                t.invalidate()
+            }
+        })
+    }
+    
+    
     struct Location {
         var cityName : String = ""
         var provinceName : String = ""
@@ -166,7 +177,7 @@ class WeatherData {
         }
     }
     
-    func findCity(province provName: String, city cityName: String) {
+    private func findCity(province provName: String, city cityName: String) {
         let data = ["province": removeLocationSuffix(string: provName), "city": removeLocationSuffix(string: cityName)]
         let searchResult = WeatherData.cityList.first(where: { $0.provinceName == data["province"] && $0.cityName == data["city"]})
         
