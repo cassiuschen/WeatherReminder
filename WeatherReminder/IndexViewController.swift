@@ -100,7 +100,7 @@ class IndexViewController: UIViewController, AMapLocationManagerDelegate {
     // 天气数据
     private func getWeatherData(province provinceName: String, city cityName: String) {
         weatherDataSource.loadData(province: provinceName, city: cityName, success: {() -> Void in
-            self.currentWeatherLabel.text = "\(self.weatherDataSource.currentWeatherData!.condition)，体表温度\(self.weatherDataSource.currentWeatherData!.fellTemperature)℃\n请注意保暖。"
+            self.currentWeatherLabel.attributedText = WeatherTextHelper.generateText(weatherData: self.weatherDataSource.currentWeatherData!)
         })
     }
     

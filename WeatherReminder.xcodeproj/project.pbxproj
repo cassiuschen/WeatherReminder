@@ -22,6 +22,7 @@
 		CC96632C1E24F25600086F1B /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96632B1E24F25600086F1B /* WeatherData.swift */; };
 		CCC8882D1E256D76008214CE /* CityList.json in Resources */ = {isa = PBXBuildFile; fileRef = CCC8882C1E256D76008214CE /* CityList.json */; };
 		CCC888311E2612BC008214CE /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC888301E2612BC008214CE /* ApiEndpoint.swift */; };
+		CCC888341E27DC71008214CE /* WeatherTextHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC888331E27DC71008214CE /* WeatherTextHelper.swift */; };
 		CCF61FCF1E2559D3003A0245 /* LocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF61FCE1E2559D3003A0245 /* LocationInfo.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		CC96632B1E24F25600086F1B /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		CCC8882C1E256D76008214CE /* CityList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CityList.json; sourceTree = "<group>"; };
 		CCC888301E2612BC008214CE /* ApiEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
+		CCC888331E27DC71008214CE /* WeatherTextHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTextHelper.swift; sourceTree = "<group>"; };
 		CCF61FCC1E253876003A0245 /* CBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBridge.h; sourceTree = "<group>"; };
 		CCF61FCE1E2559D3003A0245 /* LocationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +154,7 @@
 		CC490F011E1E8FFE005FECF3 /* WeatherReminder */ = {
 			isa = PBXGroup;
 			children = (
+				CCC888321E27DC5A008214CE /* Helpers */,
 				CCC8882F1E2590E3008214CE /* Controllers */,
 				CCC8882E1E2590D8008214CE /* Models */,
 				CC490F021E1E8FFE005FECF3 /* AppDelegate.swift */,
@@ -200,6 +203,14 @@
 				CC490F041E1E8FFE005FECF3 /* IndexViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		CCC888321E27DC5A008214CE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CCC888331E27DC71008214CE /* WeatherTextHelper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,6 +502,7 @@
 				CC490F0B1E1E8FFE005FECF3 /* WeatherReminder.xcdatamodeld in Sources */,
 				CC96632C1E24F25600086F1B /* WeatherData.swift in Sources */,
 				CCC888311E2612BC008214CE /* ApiEndpoint.swift in Sources */,
+				CCC888341E27DC71008214CE /* WeatherTextHelper.swift in Sources */,
 				CCF61FCF1E2559D3003A0245 /* LocationInfo.swift in Sources */,
 				CC490F031E1E8FFE005FECF3 /* AppDelegate.swift in Sources */,
 			);
@@ -646,8 +658,9 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 46H7KU73H8;
 				INFOPLIST_FILE = WeatherReminder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cassiuschen.WeatherReminder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cassiuschen.DailyWeatherReminder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = WeatherReminder/CBridge.h;
 				SWIFT_VERSION = 3.0;
@@ -662,8 +675,9 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 46H7KU73H8;
 				INFOPLIST_FILE = WeatherReminder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cassiuschen.WeatherReminder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cassiuschen.DailyWeatherReminder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = WeatherReminder/CBridge.h;
 				SWIFT_VERSION = 3.0;
