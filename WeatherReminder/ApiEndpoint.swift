@@ -15,10 +15,11 @@ enum ApiEndpoint : URLRequestConvertible {
     
     case currentWeather(String)
     case futureWeather(String)
+    case suggestion(String)
     
     var method : Alamofire.HTTPMethod {
         switch self {
-        case .currentWeather(_), .futureWeather(_):
+        case .currentWeather(_), .futureWeather(_), .suggestion(_):
             return .get
         }
     }
@@ -29,6 +30,8 @@ enum ApiEndpoint : URLRequestConvertible {
             return "/now"
         case .futureWeather(_):
             return "/forecast"
+        case .suggestion(_):
+            return "/suggestion"
         }
     }
     
@@ -37,6 +40,8 @@ enum ApiEndpoint : URLRequestConvertible {
         case .currentWeather(let city):
             return ["city": city, "key": WeatherData.ApiKey]
         case .futureWeather(let city):
+            return ["city": city, "key": WeatherData.ApiKey]
+        case .suggestion(let city):
             return ["city": city, "key": WeatherData.ApiKey]
         }
     }
@@ -50,7 +55,7 @@ enum ApiEndpoint : URLRequestConvertible {
         urlRequest.httpMethod = method.rawValue
         
         switch self {
-        case .currentWeather, .futureWeather:
+        case .currentWeather, .futureWeather, .suggestion:
             urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
         }
         

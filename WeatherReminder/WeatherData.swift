@@ -88,7 +88,13 @@ class WeatherData {
         case unknown = 999
     }
     
-    static let WeatherConditionTranslation : [Int: String] = [100: "晴", 101: "多云", 102: "少云", 103: "晴间多云", 104: "阴", 200: "有风", 201: "平静", 202: "微风", 203: "和风", 204: "清风", 205: "强风/劲风", 206: "疾风", 207: "大风", 208: "烈风", 209: "风暴", 210: "狂爆风", 211: "飓风", 212: "龙卷风", 213: "热带风暴", 300: "阵雨", 301: "强阵雨", 302: "雷阵雨", 303: "强雷阵雨", 304: "雷阵雨伴有冰雹", 305: "小雨", 306: "中雨", 307: "大雨", 308: "极端降雨", 309: "毛毛雨/细雨", 310: "暴雨", 311: "大暴雨", 312: "特大暴雨", 313: "冻雨", 400: "小雪", 401: "中雪", 402: "大雪", 403: "暴雪", 404: "雨夹雪", 405: "雨雪天气", 406: "阵雨夹雪", 407: "阵雪", 500: "薄雾", 501: "雾", 502: "霾", 503: "扬沙", 504: "浮尘", 507: "沙尘暴", 508: "强沙尘暴", 900: "热", 901: "冷", 999: "未知"]
+    static let WeatherConditionTranslation : [Int: String] = [100: "晴朗", 101: "多云", 102: "少云", 103: "晴间多云", 104: "阴天", 200: "有风", 201: "平静", 202: "微风", 203: "和风", 204: "清风", 205: "强风/劲风", 206: "疾风", 207: "大风", 208: "烈风", 209: "风暴", 210: "狂爆风", 211: "飓风", 212: "龙卷风", 213: "热带风暴", 300: "阵雨", 301: "强阵雨", 302: "雷阵雨", 303: "强雷阵雨", 304: "雷阵雨伴有冰雹", 305: "小雨", 306: "中雨", 307: "大雨", 308: "极端降雨", 309: "毛毛雨/细雨", 310: "暴雨", 311: "大暴雨", 312: "特大暴雨", 313: "冻雨", 400: "小雪", 401: "中雪", 402: "大雪", 403: "暴雪", 404: "雨夹雪", 405: "雨雪天气", 406: "阵雨夹雪", 407: "阵雪", 500: "薄雾", 501: "雾", 502: "霾", 503: "扬沙", 504: "浮尘", 507: "沙尘暴", 508: "强沙尘暴", 900: "炎热", 901: "寒冷", 999: "未知"]
+    
+    struct WindCondition {
+        var speed : Int // 风速
+        var level : String // 分级
+        var direction : String // 风向
+    }
     
     struct CurrentWeather {
         var fellTemperature : Int // 体感温度
@@ -96,6 +102,8 @@ class WeatherData {
         var wetDegree : Int  // 相对湿度
         var visibility : Int // 能见度
         var condition : WeatherCondition // 天气状况
+        var wind : WindCondition // 风
+        var comfortable : String // 整体感觉
     }
     
     var currentWeatherData : CurrentWeather? = nil
@@ -130,11 +138,28 @@ class WeatherData {
                 let currentData = result[0]["now"]
                 debugPrint(currentData)
                 let weatherConditionVal = currentData["cond"]["code"].intValue
-                self.currentWeatherData = CurrentWeather(fellTemperature: currentData["fl"].intValue, temperature: currentData["tmp"].intValue, wetDegree: currentData["hum"].intValue, visibility: currentData["vis"].intValue, condition: WeatherCondition(rawValue: weatherConditionVal)!)
-                debugPrint(self.currentWeatherData!)
+                self.currentWeatherData = CurrentWeather(fellTemperature: currentData["fl"].intValue, temperature: currentData["tmp"].intValue, wetDegree: currentData["hum"].intValue, visibility: currentData["vis"].intValue, condition: WeatherCondition(rawValue: weatherConditionVal)!, wind: WindCondition(speed: currentData["wind"]["spd"].intValue, level: currentData["wind"]["sc"].stringValue, direction: currentData["wind"]["dir"].stringValue), comfortable: "")
+                
+                WeatherData.request(ApiEndpoint.suggestion(self.locationInfo.locationId), successCallback: {(responseData) -> Void in
+                    //debugPrint(responseData!)
+                    if let result = responseData?["HeWeather5"] {
+                        let currentData = result[0]["suggestion"]
+                        debugPrint(currentData)
+                        self.currentWeatherData!.comfortable = currentData["comf"]["txt"].stringValue
+                        debugPrint(self.currentWeatherData!)
+                    } else {
+                        debugPrint("NO JSON CONTENT!")
+                    }
+                }, failCallback: {(errorType, errorBody, error) -> Void in
+                    switch errorType {
+                    default:
+                        debugPrint(errorBody ?? "NO ERROR CONTENT!")
+                    }
+                })
             } else {
                 debugPrint("NO JSON CONTENT!")
             }
+            debugPrint(self.currentWeatherData!)
         }, failCallback: {(errorType, errorBody, error) -> Void in
             switch errorType {
             default:
@@ -147,8 +172,10 @@ class WeatherData {
         findCity(province: provName, city: cityName)
         let _ : Timer! = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (t) -> Void in
             if self.currentWeatherData != nil {
-                successCallback?()
-                t.invalidate()
+                if self.currentWeatherData!.comfortable.characters.count > 0 {
+                    successCallback?()
+                    t.invalidate()
+                }
             }
         })
     }
